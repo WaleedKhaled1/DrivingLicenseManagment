@@ -1,0 +1,10 @@
+C:\Users\wk320\source\repos\MyDVLD\bin\Debug\MyDVLD.exe.config
+C:\Users\wk320\source\repos\MyDVLD\bin\Debug\MyDVLD.exe
+C:\Users\wk320\source\repos\MyDVLD\bin\Debug\MyDVLD.pdb
+C:\Users\wk320\source\repos\MyDVLD\obj\Debug\MyDVLD.csproj.AssemblyReference.cache
+C:\Users\wk320\source\repos\MyDVLD\obj\Debug\MyDVLD.Form1.resources
+C:\Users\wk320\source\repos\MyDVLD\obj\Debug\MyDVLD.Properties.Resources.resources
+C:\Users\wk320\source\repos\MyDVLD\obj\Debug\MyDVLD.csproj.GenerateResource.cache
+C:\Users\wk320\source\repos\MyDVLD\obj\Debug\MyDVLD.csproj.CoreCompileInputs.cache
+C:\Users\wk320\source\repos\MyDVLD\obj\Debug\MyDVLD.exe
+C:\Users\wk320\source\repos\MyDVLD\obj\Debug\MyDVLD.pdb
