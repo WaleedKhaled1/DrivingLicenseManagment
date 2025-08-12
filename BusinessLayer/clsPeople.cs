@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Data.SqlClient;
 namespace BusinessLayer
 {
-    public class DVLDBusiness
+    public class clsPeople
     {
 
         public enum enMode { AddMode = 0, UpdateMode = 1 };
@@ -37,7 +37,7 @@ namespace BusinessLayer
 
             
 
-        public DVLDBusiness() 
+        public clsPeople() 
         {
             PersonID = -1;
             NationalNo = "";
@@ -55,7 +55,7 @@ namespace BusinessLayer
             Mode = enMode.AddMode;
         }
 
-        public DVLDBusiness(int personID, string nationalNo, string firstName, string secondName, string thirdName, string lastName,
+        public clsPeople(int personID, string nationalNo, string firstName, string secondName, string thirdName, string lastName,
                   DateTime dateOfBirth, int gendor, string address, string phone, string email, int countryID, string imagePath)
         {
             PersonID = personID;
@@ -91,7 +91,7 @@ namespace BusinessLayer
             return clsPersonsData.IsPersonExistByNN(NationalNo);
         }
 
-        public static DVLDBusiness FindByID(int PersonID)
+        public static clsPeople FindByID(int PersonID)
         {
            // System.Diagnostics.Debug.WriteLine("دخلنا على DVLDBusiness.Find");
 
@@ -102,7 +102,7 @@ namespace BusinessLayer
 
             if (clsPersonsData.FindByID(PersonID,ref NationalNo,ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref DateOfBirth, ref Gendor, ref Address, ref Phone, ref Email,ref NationalityCountryID,ref ImagePath))
             {
-                return new DVLDBusiness(PersonID,NationalNo,FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gendor, Address, Phone, Email, NationalityCountryID, ImagePath);
+                return new clsPeople(PersonID,NationalNo,FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gendor, Address, Phone, Email, NationalityCountryID, ImagePath);
             }
             else
             {
@@ -110,7 +110,7 @@ namespace BusinessLayer
             }
         }
 
-        public static DVLDBusiness FindByNationalNo(string NationalNo)
+        public static clsPeople FindByNationalNo(string NationalNo)
         {
             // System.Diagnostics.Debug.WriteLine("دخلنا على DVLDBusiness.Find");
 
@@ -121,7 +121,7 @@ namespace BusinessLayer
 
             if (clsPersonsData.FindByNationalNo(ref PersonID, NationalNo, ref FirstName, ref SecondName, ref ThirdName, ref LastName, ref DateOfBirth, ref Gendor, ref Address, ref Phone, ref Email, ref NationalityCountryID, ref ImagePath))
             {
-                return new DVLDBusiness(PersonID, NationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gendor, Address, Phone, Email, NationalityCountryID, ImagePath);
+                return new clsPeople(PersonID, NationalNo, FirstName, SecondName, ThirdName, LastName, DateOfBirth, Gendor, Address, Phone, Email, NationalityCountryID, ImagePath);
             }
             else
             {

@@ -45,7 +45,7 @@ namespace MyDVLD
             }
         }
     
-        public DVLDBusiness SelectedPersonInfo
+        public clsPeople SelectedPersonInfo
         {
             get { return ctrlpersoninfo1.SelectedPersonInfo; }
         }

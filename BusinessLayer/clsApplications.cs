@@ -23,7 +23,7 @@ namespace BusinessLayer
         public int ApplicationID { set; get; }
         public int ApplicantPersonID { set; get; }
 
-        public DVLDBusiness PersonInfo { set; get; }
+        public clsPeople PersonInfo { set; get; }
         public DateTime ApplicationDate { set; get; }
         public int ApplicationTypeID { set; get; }
         public enStatus ApplicationStatus { set; get; }
@@ -36,7 +36,7 @@ namespace BusinessLayer
         {
             ApplicationID = applicationID;
             ApplicantPersonID = applicantPersonID;
-            PersonInfo=DVLDBusiness.FindByID(ApplicantPersonID);
+            PersonInfo=clsPeople.FindByID(ApplicantPersonID);
             ApplicationDate = applicationDate;
             ApplicationTypeID = applicationTypeID;
             ApplicationStatus = applicationStatus;

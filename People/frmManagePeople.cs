@@ -13,7 +13,7 @@ namespace MyDVLD
 {
     public partial class frmManagePeople : Form
     {
-        private static DataTable _dtAllPeople = DVLDBusiness.GetAllPeople();
+        private static DataTable _dtAllPeople = clsPeople.GetAllPeople();
 
    
 
@@ -30,7 +30,7 @@ namespace MyDVLD
 
         private void _RefreshPeople()
         {
-            _dtAllPeople = DVLDBusiness.GetAllPeople();
+            _dtAllPeople = clsPeople.GetAllPeople();
             _dtPeople = _dtAllPeople.DefaultView.ToTable(false, "PersonID", "NationalNo",
                                                       "FirstName", "SecondName", "ThirdName", "LastName",
                                                       "Gendor", "DateOfBirth", "CountryName",
@@ -120,7 +120,7 @@ namespace MyDVLD
         {
             if (MessageBox.Show("Are you sure you want to delete Person [" + dataGridView1.CurrentRow.Cells[0].Value + "]", "Confirm Delete", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
             {
-                if (DVLDBusiness.DeletePersonByID((int)dataGridView1.CurrentRow.Cells[0].Value))
+                if (clsPeople.DeletePersonByID((int)dataGridView1.CurrentRow.Cells[0].Value))
                 {
                     MessageBox.Show("Deleted was Successfully", "Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }

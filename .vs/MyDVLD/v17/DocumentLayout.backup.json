@@ -3,27 +3,8 @@
   "WorkspaceRootPath": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|c:\\users\\wk320\\source\\repos\\mydvld\\applications\\intrnational driving license\\frmaddnewintrnationaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|solutionrelative:applications\\intrnational driving license\\frmaddnewintrnationaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DC288BA-3EE1-49FC-965A-C153631CAB63}|..\\DataAccessLayer1\\DataAccessLayer1.csproj|c:\\users\\wk320\\source\\repos\\dataaccesslayer1\\clsintrnationaldrivinglicensedata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EAC9DC0-8332-4CC8-8ABE-2ACDEA03460E}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\wk320\\source\\repos\\businesslayer\\clsinternationaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|c:\\users\\wk320\\source\\repos\\mydvld\\applications\\intrnational driving license\\frmaddnewintrnationaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|solutionrelative:applications\\intrnational driving license\\frmaddnewintrnationaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EAC9DC0-8332-4CC8-8ABE-2ACDEA03460E}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\wk320\\source\\repos\\businesslayer\\clslocaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DC288BA-3EE1-49FC-965A-C153631CAB63}|..\\DataAccessLayer1\\DataAccessLayer1.csproj|c:\\users\\wk320\\source\\repos\\dataaccesslayer1\\clslicensesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EAC9DC0-8332-4CC8-8ABE-2ACDEA03460E}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\wk320\\source\\repos\\businesslayer\\clslicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|c:\\users\\wk320\\source\\repos\\mydvld\\applications\\applicationtypes\\frmmanageapplicationtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|solutionrelative:applications\\applicationtypes\\frmmanageapplicationtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|C:\\Users\\wk320\\source\\repos\\MyDVLD\\applications\\local driving license\\frmmanagelocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,18 +15,20 @@
       "RelativeMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|solutionrelative:applications\\local driving license\\frmmanagelocaldrivinglicenseapplication.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|c:\\users\\wk320\\source\\repos\\mydvld\\applications\\intrnational driving license\\frmaddnewintrnationaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|solutionrelative:applications\\intrnational driving license\\frmaddnewintrnationaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|C:\\Users\\wk320\\source\\repos\\MyDVLD\\applications\\intrnational driving license\\frmaddnewintrnationaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|solutionrelative:applications\\intrnational driving license\\frmaddnewintrnationaldrivinglicense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|C:\\Users\\wk320\\source\\repos\\MyDVLD\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|C:\\Users\\wk320\\source\\repos\\MyDVLD\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{07ECF7BE-9897-4E08-AAE7-2CCC3426FFB2}|PresntationLayer.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8EAC9DC0-8332-4CC8-8ABE-2ACDEA03460E}|..\\BusinessLayer\\BusinessLayer.csproj|c:\\users\\wk320\\source\\repos\\businesslayer\\clsapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3DC288BA-3EE1-49FC-965A-C153631CAB63}|..\\DataAccessLayer1\\DataAccessLayer1.csproj|c:\\users\\wk320\\source\\repos\\dataaccesslayer1\\clsapplicationsdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -55,148 +38,73 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "clsInternationalDrivingLicense.cs",
-              "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\BusinessLayer\\clsInternationalDrivingLicense.cs",
-              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsInternationalDrivingLicense.cs",
-              "ToolTip": "C:\\Users\\wk320\\source\\repos\\BusinessLayer\\clsInternationalDrivingLicense.cs",
-              "RelativeToolTip": "..\\BusinessLayer\\clsInternationalDrivingLicense.cs",
-              "ViewState": "AgIAAEQAAAAAAAAAAAAAwJcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T20:26:36.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "clsIntrnationalDrivingLicenseData.cs",
-              "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\DataAccessLayer1\\clsIntrnationalDrivingLicenseData.cs",
-              "RelativeDocumentMoniker": "..\\DataAccessLayer1\\clsIntrnationalDrivingLicenseData.cs",
-              "ToolTip": "C:\\Users\\wk320\\source\\repos\\DataAccessLayer1\\clsIntrnationalDrivingLicenseData.cs",
-              "RelativeToolTip": "..\\DataAccessLayer1\\clsIntrnationalDrivingLicenseData.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAywK0AAAB3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T20:21:30.64Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "frmManageApplicationTypes.cs",
+              "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Applications\\ApplicationTypes\\frmManageApplicationTypes.cs",
+              "RelativeDocumentMoniker": "Applications\\ApplicationTypes\\frmManageApplicationTypes.cs",
+              "ToolTip": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Applications\\ApplicationTypes\\frmManageApplicationTypes.cs",
+              "RelativeToolTip": "Applications\\ApplicationTypes\\frmManageApplicationTypes.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAzwAAAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-12T00:55:13.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "frmAddNewIntrnationalDrivingLicense.cs",
               "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Applications\\Intrnational Driving License\\frmAddNewIntrnationalDrivingLicense.cs",
               "RelativeDocumentMoniker": "Applications\\Intrnational Driving License\\frmAddNewIntrnationalDrivingLicense.cs",
               "ToolTip": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Applications\\Intrnational Driving License\\frmAddNewIntrnationalDrivingLicense.cs",
               "RelativeToolTip": "Applications\\Intrnational Driving License\\frmAddNewIntrnationalDrivingLicense.cs",
-              "ViewState": "AgIAAEwAAAAAAAAAAAAnwFwAAAAUAAAAAAAAAA==",
+              "ViewState": "AgIAAF0AAAAAAAAAAAAAAGMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-11T20:05:09.368Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "frmAddNewIntrnationalDrivingLicense.cs [Design]",
               "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Applications\\Intrnational Driving License\\frmAddNewIntrnationalDrivingLicense.cs",
               "RelativeDocumentMoniker": "Applications\\Intrnational Driving License\\frmAddNewIntrnationalDrivingLicense.cs",
               "ToolTip": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Applications\\Intrnational Driving License\\frmAddNewIntrnationalDrivingLicense.cs [Design]",
               "RelativeToolTip": "Applications\\Intrnational Driving License\\frmAddNewIntrnationalDrivingLicense.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-11T20:05:07.401Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-08-11T20:05:07.401Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "clsLocalDrivingLicense.cs",
-              "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\BusinessLayer\\clsLocalDrivingLicense.cs",
-              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsLocalDrivingLicense.cs",
-              "ToolTip": "C:\\Users\\wk320\\source\\repos\\BusinessLayer\\clsLocalDrivingLicense.cs",
-              "RelativeToolTip": "..\\BusinessLayer\\clsLocalDrivingLicense.cs",
-              "ViewState": "AgIAACIAAAAAAAAAAAAuwIYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-09T15:17:41.116Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "clsLicensesData.cs",
-              "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\DataAccessLayer1\\clsLicensesData.cs",
-              "RelativeDocumentMoniker": "..\\DataAccessLayer1\\clsLicensesData.cs",
-              "ToolTip": "C:\\Users\\wk320\\source\\repos\\DataAccessLayer1\\clsLicensesData.cs",
-              "RelativeToolTip": "..\\DataAccessLayer1\\clsLicensesData.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T14:04:13.237Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "clsLicenses.cs",
-              "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\BusinessLayer\\clsLicenses.cs",
-              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsLicenses.cs",
-              "ToolTip": "C:\\Users\\wk320\\source\\repos\\BusinessLayer\\clsLicenses.cs",
-              "RelativeToolTip": "..\\BusinessLayer\\clsLicenses.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAewIgAAAAqAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-08T13:27:24.452Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 1,
               "Title": "frmManageLocalDrivingLicenseApplication.cs",
               "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
               "ToolTip": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
               "RelativeToolTip": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
-              "ViewState": "AgIAABIBAAAAAAAAAAAnwC0BAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAPkAAAAAAAAAAAAuwA8BAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T23:16:58.539Z"
+              "WhenOpened": "2025-08-07T23:16:58.539Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 2,
               "Title": "frmManageLocalDrivingLicenseApplication.cs [Design]",
               "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
               "RelativeDocumentMoniker": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs",
               "ToolTip": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs [Design]",
               "RelativeToolTip": "Applications\\Local Driving License\\frmManageLocalDrivingLicenseApplication.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T23:17:02.49Z"
+              "WhenOpened": "2025-08-07T23:17:02.49Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "clsApplicationsData.cs",
-              "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\DataAccessLayer1\\clsApplicationsData.cs",
-              "RelativeDocumentMoniker": "..\\DataAccessLayer1\\clsApplicationsData.cs",
-              "ToolTip": "C:\\Users\\wk320\\source\\repos\\DataAccessLayer1\\clsApplicationsData.cs",
-              "RelativeToolTip": "..\\DataAccessLayer1\\clsApplicationsData.cs",
-              "ViewState": "AgIAAI8AAAAAAAAAAAAxwI8AAABJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T14:40:41.802Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "clsApplications.cs",
-              "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\BusinessLayer\\clsApplications.cs",
-              "RelativeDocumentMoniker": "..\\BusinessLayer\\clsApplications.cs",
-              "ToolTip": "C:\\Users\\wk320\\source\\repos\\BusinessLayer\\clsApplications.cs",
-              "RelativeToolTip": "..\\BusinessLayer\\clsApplications.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAuwGMAAAA4AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-07T14:39:25.245Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 5,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
@@ -208,7 +116,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 6,
               "Title": "Form1.cs [Design]",
               "DocumentMoniker": "C:\\Users\\wk320\\source\\repos\\MyDVLD\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",

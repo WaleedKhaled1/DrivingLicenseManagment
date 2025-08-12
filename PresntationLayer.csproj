@@ -462,12 +462,6 @@
     <None Include="Resources\Logo Final.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
-      <Project>{8eac9dc0-8332-4cc8-8abe-2acdea03460e}</Project>
-      <Name>BusinessLayer</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\Add Person 72.png" />
   </ItemGroup>
   <ItemGroup>
@@ -835,6 +829,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\PersonLicenseHistory 5124.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="BusinessLayer\BusinessLayer.csproj">
+      <Project>{8eac9dc0-8332-4cc8-8abe-2acdea03460e}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

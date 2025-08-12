@@ -16,10 +16,10 @@ namespace MyDVLD
     public partial class ctrlpersoninfo : UserControl
     {
         private int _PersonID = -1;
-        DVLDBusiness obj;
+        clsPeople obj;
         public int PersonID { get { return _PersonID; } }
 
-        public DVLDBusiness SelectedPersonInfo
+        public clsPeople SelectedPersonInfo
         {
             get { return obj; }
         }
@@ -32,7 +32,7 @@ namespace MyDVLD
         {
             _PersonID = personid;
 
-            obj = DVLDBusiness.FindByID(personid);
+            obj = clsPeople.FindByID(personid);
 
             if (obj == null)
             {
@@ -59,7 +59,7 @@ namespace MyDVLD
 
             lblDate.Text = obj.DateOfBirth.ToString();
             lblPhone.Text = obj.Phone;
-            lblCountry.Text = DVLDBusiness.GetCountryNameByID(obj.CountryID);
+            lblCountry.Text = clsPeople.GetCountryNameByID(obj.CountryID);
 
            _LoadPersonImage();
         }
@@ -84,7 +84,7 @@ namespace MyDVLD
         public void LoadPersonInfoByNationalNo(string nationalnumber)
         {
 
-            obj = DVLDBusiness.FindByNationalNo(nationalnumber);
+            obj = clsPeople.FindByNationalNo(nationalnumber);
 
             if (obj == null)
             {
@@ -113,7 +113,7 @@ namespace MyDVLD
 
             lblDate.Text = obj.DateOfBirth.ToString();
             lblPhone.Text = obj.Phone;
-            lblCountry.Text = DVLDBusiness.GetCountryNameByID(obj.CountryID);
+            lblCountry.Text = clsPeople.GetCountryNameByID(obj.CountryID);
             _LoadPersonImage();
         }
 

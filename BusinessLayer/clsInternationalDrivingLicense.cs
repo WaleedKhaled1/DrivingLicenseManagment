@@ -61,7 +61,7 @@ namespace BusinessLayer
 
             ApplicationID = applicationID;
             ApplicantPersonID = applicantPersonID;
-            PersonInfo = DVLDBusiness.FindByID(ApplicantPersonID);
+            PersonInfo = clsPeople.FindByID(ApplicantPersonID);
             ApplicationDate = applicationDate;
             ApplicationTypeID = applicationTypeID;
             ApplicationStatus = applicationStatus;

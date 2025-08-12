@@ -11,7 +11,7 @@ namespace BusinessLayer
         public int UserID { set; get; }
         public int PersonID { set; get; }
 
-        public DVLDBusiness PersonInfo;
+        public clsPeople PersonInfo;
         public string UserName { set; get; }
         public string Password { set; get; }
         public bool IsActive { set; get; }
@@ -32,7 +32,7 @@ namespace BusinessLayer
             UserName = username;
             Password = password;
             IsActive = isactive;
-            this.PersonInfo=DVLDBusiness.FindByID(personID);
+            this.PersonInfo=clsPeople.FindByID(personID);
             Mode = enModeUsers.UpdateMode;
         }
 

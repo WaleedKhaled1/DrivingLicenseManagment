@@ -29,7 +29,7 @@ namespace MyDVLD
         public enum enMode { AddMode = 0, UpdateMode = 1 };
         enMode Mode = enMode.AddMode;
 
-        DVLDBusiness obj;
+        clsPeople obj;
 
         public void LoadPerson()
         {
@@ -53,7 +53,7 @@ namespace MyDVLD
             dateTimePicker1.MaxDate = MaxDate;
             dateTimePicker1.MinDate = DateTime.Today.AddYears(-100);
 
-            DataTable dt = DVLDBusiness.GetAllCountries();
+            DataTable dt = clsPeople.GetAllCountries();
 
             cbCountry.DataSource = dt;
             cbCountry.DisplayMember = "CountryName";
@@ -68,13 +68,13 @@ namespace MyDVLD
 
             if (Mode == enMode.AddMode)
             {
-                obj = new DVLDBusiness();
+                obj = new clsPeople();
                 lblForm.Text = "Add New Person";
                 return; 
             }
 
 
-            obj = DVLDBusiness.FindByID(_PersonID);
+            obj = clsPeople.FindByID(_PersonID);
 
 
             if (obj == null)
@@ -289,7 +289,7 @@ namespace MyDVLD
                 errorProvider.SetError(txtNN, null);
             }
 
-            if (txtNN.Text.Trim() != obj.NationalNo && DVLDBusiness.IsExist(txtNN.Text.Trim()))
+            if (txtNN.Text.Trim() != obj.NationalNo && clsPeople.IsExist(txtNN.Text.Trim()))
             {
                 e.Cancel = true;
                 errorProvider.SetError(txtNN, "National Number is used for another person!");

@@ -29,7 +29,7 @@ namespace BusinessLayer
             }
         }
 
-        public DVLDBusiness PesonInfo { set; get; }
+        public clsPeople PesonInfo { set; get; }
 
         public clsLicenses()
         {
@@ -66,7 +66,7 @@ namespace BusinessLayer
 
             DriverID=driverID;
             PersonID = personID;
-            DVLDBusiness PesonInfo=DVLDBusiness.FindByID(PersonID);
+            clsPeople PesonInfo=clsPeople.FindByID(PersonID);
             CreatedByUserID = createdByUserID;
             DCreatedDate = dcreatedDate;
         }
