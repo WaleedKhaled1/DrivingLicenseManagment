@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,7 +14,7 @@ namespace DataAccessLayer1
 {
     public class clsDetainedLicenseData
     {
-
+        static string SourceNameInEventViewer = "clsDetainedLicenseData";
         public static bool FindLicenseDetainedInfoByLicenseID(ref int detainID,int licenseID,ref DateTime detainDate,ref float fineFees,ref int createdByUserID,ref bool isReleased,
                                                               ref DateTime? releaseDate,ref int? releasedByUserID,ref int? releaseApplicationID)
 
@@ -51,7 +52,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -88,7 +94,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -137,7 +148,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -178,7 +194,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -210,7 +231,12 @@ namespace DataAccessLayer1
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally

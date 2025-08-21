@@ -62,8 +62,9 @@
             this.ctrlpersoninfo2.Name = "ctrlpersoninfo2";
             this.ctrlpersoninfo2.Size = new System.Drawing.Size(1162, 317);
             this.ctrlpersoninfo2.TabIndex = 98;
+            this.ctrlpersoninfo2.Load += new System.EventHandler(this.ctrlpersoninfo2_Load);
             // 
-            // PersonInfo
+            // frmShowPersonInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -71,7 +72,7 @@
             this.Controls.Add(this.ctrlpersoninfo2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.lblForm);
-            this.Name = "PersonInfo";
+            this.Name = "frmShowPersonInfo";
             this.Text = "PersonInfo";
             this.Load += new System.EventHandler(this.PersonInfo_Load);
             this.ResumeLayout(false);

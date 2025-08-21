@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,6 +10,7 @@ namespace DataAccessLayer1
 {
     public class clsTestsData
     {
+        static string SourceNameInEventViewer = "clsTestsData";
         public static int AddNewTest(int TestAppointmentID,bool TestResult,string Notes,int CreatedByUserID)
         {
             SqlConnection connection = new SqlConnection(StringDataAccess.connection);
@@ -35,7 +37,14 @@ namespace DataAccessLayer1
             }
 
             catch (Exception ex)
-            { throw new Exception(ex.Message, ex); }
+            {
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
+            }
 
             finally { connection.Close(); }
 
@@ -82,7 +91,7 @@ namespace DataAccessLayer1
                 }
                 else
                 {
-                    // The record was not found
+
                     isFound = false;
                 }
 
@@ -92,7 +101,13 @@ namespace DataAccessLayer1
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
+
                 isFound = false;
             }
             finally
@@ -137,7 +152,6 @@ namespace DataAccessLayer1
                 if (reader.Read())
                 {
 
-                    // The record was found
                     isFound = true;
                     TestID = (int)reader["TestID"];
                     TestAppointmentID = (int)reader["TestAppointmentID"];
@@ -153,7 +167,6 @@ namespace DataAccessLayer1
                 }
                 else
                 {
-                    // The record was not found
                     isFound = false;
                 }
 
@@ -163,7 +176,13 @@ namespace DataAccessLayer1
             }
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
+
                 isFound = false;
             }
             finally
@@ -193,7 +212,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -232,8 +256,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                //Console.WriteLine("Error: " + ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
 
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally

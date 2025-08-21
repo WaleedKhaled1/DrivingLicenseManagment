@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
@@ -12,7 +13,7 @@ namespace DataAccessLayer1
 {
     public class clsIntrnationalDrivingLicenseData
     {
-
+        static string SourceNameInEventViewer = "clsIntrnationalDrivingLicenseData";
         public static DataTable GetAllInternationalLicensesForThisPerson(int PersonID)
         {
             DataTable dt = new DataTable();
@@ -41,7 +42,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -78,7 +84,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -107,7 +118,12 @@ namespace DataAccessLayer1
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -153,7 +169,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                throw new Exception(ex.ToString());
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -189,7 +210,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -245,7 +271,12 @@ namespace DataAccessLayer1
                 }
                 catch (Exception ex)
                 {
-                    throw new Exception("Error while retrieving international license info", ex);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -303,7 +334,12 @@ namespace DataAccessLayer1
             }
             catch (Exception ex)
             {
-                throw new Exception("Error while retrieving international license info", ex);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally

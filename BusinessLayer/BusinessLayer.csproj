@@ -53,7 +53,7 @@
     <Compile Include="clsTests.cs" />
     <Compile Include="clsTestTypes.cs" />
     <Compile Include="clsUsers.cs" />
-    <Compile Include="DVLDBusiness.cs" />
+    <Compile Include="clsPeople.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

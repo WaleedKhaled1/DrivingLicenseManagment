@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Runtime.Remoting.Messaging;
@@ -14,6 +15,7 @@ namespace DataAccessLayer1
 {
     public class clsPersonsData
     {
+        static string SourceNameInEventViewer = "clsPersonsData";
         public static DataTable GetAllPeople()
         {
             DataTable dt = new DataTable();
@@ -40,8 +42,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-            }
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
 
             finally
             {
@@ -74,13 +80,16 @@ namespace DataAccessLayer1
                     dt.Load(reader);
                 }
 
-                reader.Close();
-                connection.Close();
             }
 
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -123,7 +132,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -200,7 +214,12 @@ namespace DataAccessLayer1
 
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -246,7 +265,8 @@ namespace DataAccessLayer1
                     Email = reader["Email"].ToString();
                     Phone = reader["Phone"].ToString();
                     NationalityCountryID = Convert.ToInt32(reader["NationalityCountryID"]);
-                    ImagePath = reader["ImagePath"] == DBNull.Value ? "" : reader["ImagePath"].ToString();
+                    // ImagePath = reader["ImagePath"] == DBNull.Value ? "" : reader["ImagePath"].ToString();
+                    ImagePath = reader["ImagePath"]?.ToString();
                 }
                 else
                 {
@@ -257,7 +277,12 @@ namespace DataAccessLayer1
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
             finally
             {
@@ -281,17 +306,13 @@ namespace DataAccessLayer1
 
             try
             {
-                //System.Diagnostics.Debug.WriteLine("Trying to open connection...");
                 connection.Open();
-                // System.Diagnostics.Debug.WriteLine("Connection opened.");
 
                 SqlDataReader reader = cmd.ExecuteReader();
-                System.Diagnostics.Debug.WriteLine("Reader executed. Has rows: " + reader.HasRows);
 
                 if (reader.Read())
                 {
                     isFound = true;
-                    //System.Diagnostics.Debug.WriteLine("Reader found a row. Filling values...");
 
                     PersonID = (int)reader["PersonID"];
                     FirstName = reader["FirstName"].ToString();
@@ -308,14 +329,20 @@ namespace DataAccessLayer1
                 }
                 else
                 {
-                    System.Diagnostics.Debug.WriteLine("No row found in reader.");
+                    isFound = false;
                 }
 
                 reader.Close();
             }
             catch (Exception ex)
             {
-                System.Diagnostics.Debug.WriteLine("Exception: " + ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
+
                 isFound = false;
             }
             finally
@@ -376,7 +403,12 @@ namespace DataAccessLayer1
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally
@@ -409,8 +441,12 @@ namespace DataAccessLayer1
             }
             catch (Exception ex)
             {
-                // تقدر تطبع الخطأ أو تسجله
-                throw new Exception("Error fetching country name: " + ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
 
@@ -444,6 +480,13 @@ namespace DataAccessLayer1
             catch (Exception ex)
             {
                 IsDeleted = false;
+
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally

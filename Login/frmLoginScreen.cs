@@ -9,13 +9,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.Win32;
+using System.Diagnostics;
 
 namespace MyDVLD
 {
     public partial class frmLoginScreen : Form
     {
- 
-        string FilePath = "C:\\License\\Users.txt";        
         public frmLoginScreen()
         { 
             InitializeComponent();
@@ -24,21 +24,33 @@ namespace MyDVLD
         private void btnLogin_Click(object sender, EventArgs e)
         {
             bool IsActive = true;
-          
-           
+
+            string KeyPath = @"HKEY_CURRENT_USER\SOFTWARE\LOGIN";
+            string valueName = "VALUE NAME";
+
+            string SourceNameInEventViewer = "Login";
+
             if (clsUsers.IsUserExistAndActive(txtUser.Text, txtPass.Text, ref IsActive))
             {
                 if (IsActive)
                 {
                     if (checkBox1.Checked)
                     {
-                        FileStream fs = new FileStream(FilePath, FileMode.Create, FileAccess.Write);
-                        StreamWriter writer = new StreamWriter(fs);
+                        try
                         {
-                            writer.WriteLine($"{txtUser.Text},{txtPass.Text}");
-                            writer.Close();
+                            Registry.SetValue(KeyPath,valueName,txtUser.Text+","+txtPass.Text, RegistryValueKind.String);
                         }
 
+                        catch (Exception ex)
+                        {
+                            if (!EventLog.SourceExists(SourceNameInEventViewer))
+                            {
+                                EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                            }
+
+                            EventLog.WriteEntry(SourceNameInEventViewer,ex.Message, EventLogEntryType.Error);
+
+                        }
                    
                     }
                     clsUsers obj = clsUsers.FindUserByUserNameAndPassword(txtUser.Text, txtPass.Text);
@@ -66,10 +78,8 @@ namespace MyDVLD
 
         private void frmLoginScreen_Load(object sender, EventArgs e)
         {
-            if (File.Exists(FilePath))
-            {
-                StreamReader reader = new StreamReader(FilePath);
-                string line = reader.ReadLine();
+
+                string line = Registry.GetValue(KeyPath,valueName,null)as string;
                 string[] Parts = { };
                 if (line != null)
                 {
@@ -78,11 +88,6 @@ namespace MyDVLD
                     txtPass.Text = Parts[1];
                 }
 
-                reader.Close();
-
-              
-            }
-            
         }
     }
 }

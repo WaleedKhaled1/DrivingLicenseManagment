@@ -6,11 +6,13 @@ using System.Linq;
 using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
+using System.Diagnostics;
 
 namespace DataAccessLayer1
 {
     public class clsTestTypesData
     {
+        static string SourceNameInEventViewer = "clsTestTypesData";
         public static DataTable GetAllTestTypes()
         {
             DataTable dt = new DataTable();
@@ -34,7 +36,12 @@ namespace DataAccessLayer1
             }
             catch (Exception ex)
             {
-                throw new Exception(ex.Message);
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
             finally
             {
@@ -81,6 +88,13 @@ namespace DataAccessLayer1
             catch (Exception ex)
             {
                 isFound = false;
+
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally { connection.Close(); }
@@ -113,7 +127,12 @@ namespace DataAccessLayer1
             }
             catch (Exception ex)
             {
-                //IsUpdated = false;
+                if (!EventLog.SourceExists(SourceNameInEventViewer))
+                {
+                    EventLog.CreateEventSource(SourceNameInEventViewer, "Application");
+                }
+
+                EventLog.WriteEntry(SourceNameInEventViewer, ex.Message, EventLogEntryType.Error);
             }
 
             finally

@@ -29,5 +29,10 @@ namespace MyDVLD
         {
             this.Close();
         }
+
+        private void ctrlpersoninfo2_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
